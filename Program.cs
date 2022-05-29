@@ -13,7 +13,7 @@ var supportedTypes = new Dictionary<string, string>()
 
 
 var progPath = Environment.ProcessPath;
-var cmdRegValue = @$"""{progPath}"" %1";
+var cmdRegValue = @$"""{progPath}"" ""%1""";
 var shellRegPath = @"Software\Classes\*\shell";
 var menuReg = Registry.CurrentUser.OpenSubKey(@$"{shellRegPath}\{KEY_NAME}", true);
 var cmdReg = Registry.CurrentUser.OpenSubKey(@$"{shellRegPath}\{KEY_NAME}\command", true);
